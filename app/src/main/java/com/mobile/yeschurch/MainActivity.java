@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button mapsButtons;
     private Button logInButton;
+    private Button detailButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,14 @@ public class MainActivity extends AppCompatActivity {
 
         logInButton = findViewById(R.id.buttonLogin);
         logInButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                nextActivity(LoginActivity.class);
+            }
+        });
+
+        detailButton = findViewById(R.id.buttonDetail);
+        detailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 nextActivity(LoginActivity.class);
