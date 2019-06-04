@@ -35,6 +35,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     private void putMarkers(){
+        //add menu left side
+        //https://github.com/codepath/android_guides/wiki/Fragment-Navigation-Drawer
         for( Church church : Constants.christianChurchs ){
             mMap.addMarker(new MarkerOptions().position(church.getLatLng()).title(church.getName()));
         }
