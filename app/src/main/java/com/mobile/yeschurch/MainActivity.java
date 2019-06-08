@@ -17,15 +17,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mapsButtons = (Button) findViewById(R.id.buttonMaps);
-
-        mapsButtons.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                nextActivity(MapsActivity.class);
-            }
-        });
-
         logInButton = findViewById(R.id.buttonLogin);
         logInButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,11 +25,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        mapsButtons = (Button) findViewById(R.id.buttonMaps);
+        mapsButtons.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                nextActivity(MapsActivity.class);
+            }
+        });
+
         detailButton = findViewById(R.id.buttonDetail);
         detailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                nextActivity(LoginActivity.class);
+                nextActivity(DetailActivity.class);
             }
         });
     }

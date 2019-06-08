@@ -61,9 +61,17 @@
         android:text="Log in"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show list churches"
+        tools:layout_editor_absoluteX="117dp"
+        tools:layout_editor_absoluteY="454dp" />
 
 </android.support.constraint.ConstraintLayout>
