@@ -3,9 +3,9 @@ package com.mobile.yeschurch;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ChurchService {
+public class ChurchFilterService {
 
-    public ChurchService(){}
+    public ChurchFilterService(){}
 
     public List<Church> applyKids(List<Church> churches, Boolean flag){
         List<Church> result = new ArrayList<>();
