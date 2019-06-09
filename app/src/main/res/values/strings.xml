@@ -55,12 +55,6 @@
     </string-array>
     <string name="filter">Filtros</string>
 
-    <string-array name="type_churches">
-        <item>Su presencia</item>
-        <item>Adventista 8 </item>
-        <item>Mormona</item>
-    </string-array>
-
     <array name="icons">
         <item>@drawable/religion_pray_church</item>
         <item>@drawable/religion_pray_church</item>
