@@ -37,7 +37,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="36dp"
                     android:layout_marginStart="10dp"
-                    android:text="@string/label_church_name" />
+                    android:text="@string/label_church_name"
+                    android:textSize="14sp" />
 
                 <EditText
                     android:id="@+id/text_church_name"
@@ -47,7 +48,8 @@
                     android:clickable="false"
                     android:focusable="false"
                     android:inputType="none"
-                    android:longClickable="false" />
+                    android:longClickable="false"
+                    android:textSize="14sp" />
 
             </LinearLayout>
 
@@ -275,6 +277,13 @@
                     android:longClickable="false" />
             </LinearLayout>
 
+            <Button
+                android:id="@+id/button_church_photos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorButtonPink"
+                android:text="@string/button_church_pictures"
+                android:textAlignment="center" />
 
         </LinearLayout>
     </ScrollView>

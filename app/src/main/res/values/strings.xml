@@ -68,5 +68,8 @@
     </array>
 
     <string name="action_settings">Settings</string>
+    <string name="button_church_pictures">Ver fotos</string>
+    <string name="title_activity_paola">paola</string>
+    <string name="title_activity_picture">PictureActivity</string>
 
 </resources>
