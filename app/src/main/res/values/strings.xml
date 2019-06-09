@@ -20,10 +20,31 @@
     <string name="label_church_type">Denomination:</string>
     <string name="label_church_assistants"># assistants:</string>
 
+    <!-- String related to slide menu maps board  -->
+    <string-array name="menu">
+        <item>Tipo Iglesia</item>
+        <item>Baños</item>
+        <item>Parqueadero</item>
+    </string-array>
+    <string-array name="churchtype">
+        <item>Cristiana</item>
+        <item>Catolica</item>
+        <item>Bautista</item>
+        <item>Otra</item>
+    </string-array>
 
     <string-array name="type_churches">
         <item>Su presencia</item>
         <item>Adventista 8 </item>
         <item>Mormona</item>
     </string-array>
+
+    <array name="icons">
+        <item>@drawable/religion_pray_church</item>
+        <item>@drawable/religion_pray_church</item>
+        <item>@drawable/religion_pray_church</item>
+    </array>
+
+    <string name="action_settings">Settings</string>
+
 </resources>

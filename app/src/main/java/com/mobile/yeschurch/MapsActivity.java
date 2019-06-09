@@ -7,8 +7,9 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.util.List;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -31,13 +32,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //mMap.addMarker(new MarkerOptions().position(bogota).title("Find..."));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(Constants.bogota));
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(Constants.bogota, Constants.PREFERED_ZOOM));
-        putMarkers();
+        putMarkers( Constants.christianChurches);
     }
 
-    private void putMarkers(){
+    private void putMarkers(List<Church> churches){
         //add menu left side
         //https://github.com/codepath/android_guides/wiki/Fragment-Navigation-Drawer
-        for( Church church : Constants.christianChurchs ){
+        for( Church church : churches ){
             mMap.addMarker(new MarkerOptions().position(church.getLatLng()).title(church.getName()));
         }
     }

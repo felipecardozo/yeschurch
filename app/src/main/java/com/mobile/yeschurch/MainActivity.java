@@ -40,6 +40,14 @@ public class MainActivity extends AppCompatActivity {
                 nextActivity(DetailActivity.class);
             }
         });
+
+        Button slideButton = (Button) findViewById(R.id.buttonSlide);
+        slideButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                nextActivity(SlideActivity.class);
+            }
+        });
     }
 
     private void nextActivity(Class clazz){
