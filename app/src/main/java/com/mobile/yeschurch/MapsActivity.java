@@ -87,12 +87,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
                 break;
             case R.id.checkbox_parking:
-                if (checked){
-
-                }
-                else{
-
-                }
+                currentList = churchFilterService.applyKids(Constants.christianChurches, checked);
+                putMarkers(currentList);
                 break;
             case R.id.checkbox_signlang:
                 if (checked){
