@@ -40,25 +40,25 @@ public class DetailActivity extends AppCompatActivity {
         scheduleChurch.setText(church.getSchedule().toString());
 
         EditText kidsChurch = (EditText)findViewById(R.id.text_church_kids);
-        kidsChurch.setText(church.getHasKids().toString());
+        kidsChurch.setText( Boolean.toString(church.isKids()));
 
         EditText hasParkingChurch = (EditText)findViewById(R.id.text_church_hasParking);
-        hasParkingChurch.setText(church.getHasParking().toString());
+        hasParkingChurch.setText(Boolean.toString(church.isParking()));
 
         EditText hasParkingOutsideChurch = (EditText)findViewById(R.id.text_church_hasParkingOutside);
-        hasParkingOutsideChurch.setText(church.getHasParkingOutside().toString());
+        hasParkingOutsideChurch.setText(Boolean.toString(church.isParkingOutside()));
 
         EditText hasAccessibilityChurch = (EditText)findViewById(R.id.text_church_hasAccessibility);
-        hasAccessibilityChurch.setText(church.getHasAccessibility().toString());
+        hasAccessibilityChurch.setText(Boolean.toString(church.isAccessibility()));
 
         EditText idiomsChurch = (EditText)findViewById(R.id.text_church_idioms);
         idiomsChurch.setText(church.getIdioms().toString());
 
         EditText hasSignLanguageChurch = (EditText)findViewById(R.id.text_church_hasSignLanguage);
-        hasSignLanguageChurch.setText(church.getHasSignLanguage().toString());
+        hasSignLanguageChurch.setText(Boolean.toString(church.isSignLanguage()));
 
         EditText hasBathroomsChurch = (EditText)findViewById(R.id.text_church_hasBathrooms);
-        hasBathroomsChurch.setText(church.getHasBathrooms().toString());
+        hasBathroomsChurch.setText(Boolean.toString(church.isBathrooms()));
     }
 
     private Church createChurch() {

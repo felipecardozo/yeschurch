@@ -14,13 +14,13 @@ public class Church {
     private List<String> phones;
     private Integer assistance;
     private List<String> schedule;
-    private Boolean hasKids;
-    private Boolean hasParking;
-    private Boolean hasParkingOutside;
-    private Boolean hasAccessibility;
+    private boolean kids;
+    private boolean parking;
+    private boolean parkingOutside;
+    private boolean accessibility;
     private List<String> idioms;
-    private Boolean hasSignLanguage;
-    private Boolean hasBathrooms;
+    private boolean signLanguage;
+    private boolean bathrooms;
 
     public Church(){}
 
@@ -31,36 +31,36 @@ public class Church {
         this.type = type;
     }
 
-    public ChurchType getType() {
-        return type;
-    }
-
-    public void setType(ChurchType type) {
-        this.type = type;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public LatLng getLatLng() {
-        return latLng;
-    }
-
-    public String getCity() {
-        return city;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
+    public LatLng getLatLng() {
+        return latLng;
+    }
+
     public void setLatLng(LatLng latLng) {
         this.latLng = latLng;
     }
 
+    public String getCity() {
+        return city;
+    }
+
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public ChurchType getType() {
+        return type;
+    }
+
+    public void setType(ChurchType type) {
+        this.type = type;
     }
 
     public String getWebPage() {
@@ -95,36 +95,36 @@ public class Church {
         this.schedule = schedule;
     }
 
-    public Boolean getHasKids() {
-        return hasKids;
+    public boolean isKids() {
+        return kids;
     }
 
-    public void setHasKids(Boolean hasKids) {
-        this.hasKids = hasKids;
+    public void setKids(boolean kids) {
+        this.kids = kids;
     }
 
-    public Boolean getHasParking() {
-        return hasParking;
+    public boolean isParking() {
+        return parking;
     }
 
-    public void setHasParking(Boolean hasParking) {
-        this.hasParking = hasParking;
+    public void setParking(boolean parking) {
+        this.parking = parking;
     }
 
-    public Boolean getHasParkingOutside() {
-        return hasParkingOutside;
+    public boolean isParkingOutside() {
+        return parkingOutside;
     }
 
-    public void setHasParkingOutside(Boolean hasParkingOutside) {
-        this.hasParkingOutside = hasParkingOutside;
+    public void setParkingOutside(boolean parkingOutside) {
+        this.parkingOutside = parkingOutside;
     }
 
-    public Boolean getHasAccessibility() {
-        return hasAccessibility;
+    public boolean isAccessibility() {
+        return accessibility;
     }
 
-    public void setHasAccessibility(Boolean hasAccessibility) {
-        this.hasAccessibility = hasAccessibility;
+    public void setAccessibility(boolean accessibility) {
+        this.accessibility = accessibility;
     }
 
     public List<String> getIdioms() {
@@ -135,19 +135,19 @@ public class Church {
         this.idioms = idioms;
     }
 
-    public Boolean getHasSignLanguage() {
-        return hasSignLanguage;
+    public boolean isSignLanguage() {
+        return signLanguage;
     }
 
-    public void setHasSignLanguage(Boolean hasSignLanguage) {
-        this.hasSignLanguage = hasSignLanguage;
+    public void setSignLanguage(boolean signLanguage) {
+        this.signLanguage = signLanguage;
     }
 
-    public Boolean getHasBathrooms() {
-        return hasBathrooms;
+    public boolean isBathrooms() {
+        return bathrooms;
     }
 
-    public void setHasBathrooms(Boolean hasBathrooms) {
-        this.hasBathrooms = hasBathrooms;
+    public void setBathrooms(boolean bathrooms) {
+        this.bathrooms = bathrooms;
     }
 }

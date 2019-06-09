@@ -14,6 +14,19 @@
     <string name="error_field_required">This field is required</string>
     <string name="title_activity_detail">DetailActivity</string>
 
+    <!-- strings related to filters -->
+    <string name="apply">Aplicar</string>
+    <string name="hasbathroom">Baños</string>
+    <string name="hasparking">Parqueadero</string>
+    <string name="haskids">Kids</string>
+    <string name="hasaccesability">Acceso silla de ruedas</string>
+    <string name="hassignlanguage">Lenguage de señas</string>
+    <string-array name="languages">
+        <item>Español</item>
+        <item>Ingles</item>
+        <item>Portugues</item>
+    </string-array>
+
     <string name="label_church_name">Nombre:</string>
     <string name="label_church_url">URL:</string>
     <string name="label_church_phone">Celular:</string>
@@ -40,6 +53,7 @@
         <item>Bautista</item>
         <item>Otra</item>
     </string-array>
+    <string name="filter">Filtros</string>
 
     <string-array name="type_churches">
         <item>Su presencia</item>

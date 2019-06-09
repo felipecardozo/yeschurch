@@ -27,4 +27,11 @@ public class Constants {
         bauptistChurches.add(new Church("Iglesia Bautista Nueva Vida", new LatLng(4.681075, -74.101765), "Bogota", ChurchType.Bauptist));
     }
 
+    static {
+        christianChurches.get(0).setKids(true);
+        christianChurches.get(0).setParking(true);
+        christianChurches.get(0).setBathrooms(true);
+        christianChurches.get(2).setBathrooms(true);
+    }
+
 }
