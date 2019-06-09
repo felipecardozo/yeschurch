@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -24,6 +25,17 @@ public class DetailActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        Church church = createChurch();
+        EditText nameChurch = (EditText)findViewById(R.id.text_church_name);
+        nameChurch.setText(church.getName());
+    }
+
+    private Church createChurch() {
+        Church church = new Church();
+        church.setName("iglesia señor milagros");
+
+        return church;
     }
 
 }
