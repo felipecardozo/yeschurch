@@ -14,10 +14,18 @@
     <string name="error_field_required">This field is required</string>
     <string name="title_activity_detail">DetailActivity</string>
 
-    <string name="label_church_name">Name:</string>
+    <string name="label_church_name">Nombre:</string>
     <string name="label_church_url">URL:</string>
-    <string name="label_church_phone">Phone:</string>
-    <string name="label_church_type">Denomination:</string>
+    <string name="label_church_phone">Celular:</string>
+    <string name="label_church_type">Denominacion:</string>
+    <string name="label_church_schedule">Horarios:</string>
+    <string name="label_church_kids">Kids:</string>
+    <string name="label_church_hasParking">Parqueadero propio:</string>
+    <string name="label_church_hasParkingOutside">Parqueadero Aledaño:</string>
+    <string name="label_church_hasAccessibility">Acceso a discapacitados</string>
+    <string name="label_church_idioms">Idiomas:</string>
+    <string name="label_church_hasSignLanguage">Lenguaje de señas</string>
+    <string name="label_church_hasBathrooms">Baños</string>
     <string name="label_church_assistants"># assistants:</string>
 
     <!-- String related to slide menu maps board  -->

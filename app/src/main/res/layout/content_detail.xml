@@ -9,86 +9,274 @@
     tools:context=".DetailActivity"
     tools:showIn="@layout/activity_detail">
 
-    <LinearLayout
-        android:layout_width="395dp"
-        android:layout_height="659dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="195dp"
-            app:srcCompat="@drawable/church_cartoon_default" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="79dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/label_church_name"
-                android:layout_width="wrap_content"
-                android:layout_height="34dp"
-                android:layout_weight="1"
-                android:text="@string/label_church_name" />
-
-            <EditText
-                android:id="@+id/text_church_name"
-                android:layout_width="195dp"
-                android:layout_height="wrap_content"
-                android:clickable="false"
-                android:focusable="false"
-                android:inputType="none"
-                android:longClickable="false" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/label_church_url"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/label_church_url" />
-
-            <EditText
-                android:id="@+id/text_church_url"
-                android:layout_width="195dp"
-                android:layout_height="wrap_content"
-                android:clickable="false"
-                android:focusable="false"
-                android:inputType="none"
-                android:longClickable="false" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_width="395dp"
+            android:layout_height="659dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
 
             <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
-                android:layout_height="52dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ic_supervisor_account_purple_24dp" />
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="195dp"
+                android:contentDescription="Default icon church"
+                app:srcCompat="@drawable/church_cartoon_default" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/label_church_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/label_church_name" />
+
+                <EditText
+                    android:id="@+id/text_church_name"
+                    android:layout_width="317dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:longClickable="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/label_church_url"
+                    android:layout_width="54dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/label_church_url" />
+
+                <EditText
+                    android:id="@+id/text_church_url"
+                    android:layout_width="321dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:longClickable="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/icon_assistants"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="icon asisstants"
+                    android:textAlignment="viewStart"
+                    app:srcCompat="@drawable/asistants_icon" />
+
+                <EditText
+                    android:id="@+id/text_church_assistants"
+                    android:layout_width="317dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:longClickable="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/label_church_schedule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_church_schedule" />
+
+                <EditText
+                    android:id="@+id/text_church_schedule"
+                    android:layout_width="309dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:longClickable="false" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/label_church_kids"
+                    android:layout_width="49dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/label_church_kids" />
+
+                <EditText
+                    android:id="@+id/text_church_kids"
+                    android:layout_width="195dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:longClickable="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/label_church_hasParking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/label_church_hasParking" />
+
+                <EditText
+                    android:id="@+id/text_church_hasParking"
+                    android:layout_width="233dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:longClickable="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/label_church_hasParkingOutside"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/label_church_hasParkingOutside" />
+
+                <EditText
+                    android:id="@+id/text_church_hasParkingOutside"
+                    android:layout_width="219dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:longClickable="false" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/label_church_hasAccessibility"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/label_church_hasAccessibility" />
+
+                <EditText
+                    android:id="@+id/text_church_hasAccessibility"
+                    android:layout_width="204dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:longClickable="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/label_church_idioms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/label_church_idioms" />
+
+                <EditText
+                    android:id="@+id/text_church_idioms"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:longClickable="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/label_church_hasSignLanguage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/label_church_hasSignLanguage" />
+
+                <EditText
+                    android:id="@+id/text_church_hasSignLanguage"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:longClickable="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/label_church_hasBathrooms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/label_church_hasBathrooms" />
+
+                <EditText
+                    android:id="@+id/text_church_hasBathrooms"
+                    android:layout_width="195dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:longClickable="false" />
+            </LinearLayout>
+
+
         </LinearLayout>
+    </ScrollView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-
-
-        </LinearLayout>
-
-    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
