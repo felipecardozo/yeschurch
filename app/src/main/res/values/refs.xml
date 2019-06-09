@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="asistants_icon">@drawable/ic_supervisor_account_purple_24dp</drawable>
+</resources>

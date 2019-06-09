@@ -14,12 +14,13 @@
     <string name="error_field_required">This field is required</string>
     <string name="title_activity_detail">DetailActivity</string>
 
-    <string name="label_church_name">Name:</string>
+    <string name="label_church_name">Nombre:</string>
     <string name="label_church_url">URL:</string>
-    <string name="label_church_phone">Phone:</string>
-    <string name="label_church_type">Denomination:</string>
-    <string name="label_church_assistants"># assistants:</string>
-
+    <string name="label_church_phone">Celular:</string>
+    <string name="label_church_type">Denominacion:</string>
+    <string name="label_church_schedule">Schedule:</string>
+    <string name="label_church_kids">Kids:</string>
+    <string name="label_church_">Horarios:</string>
 
     <string-array name="type_churches">
         <item>Su presencia</item>
