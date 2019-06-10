@@ -12,11 +12,13 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.mobile.yeschurch.login.StandardLoginActivity;
+import com.mobile.yeschurch.signUp.SignUpActivity;
 
 public class AuthService {
 
     private FirebaseAuth firebaseAuth;
     private StandardLoginActivity context;
+    private SignUpActivity signUpcontext;
     private ProgressDialog progressDialog;
     private EditText textEmail;
     private EditText textPassword;
@@ -24,6 +26,12 @@ public class AuthService {
     public AuthService(StandardLoginActivity context, ProgressDialog progressDialog){
         firebaseAuth = FirebaseAuth.getInstance();
         this.context = context;
+        this.progressDialog = progressDialog;
+    }
+
+    public AuthService(SignUpActivity context, ProgressDialog progressDialog){
+        firebaseAuth = FirebaseAuth.getInstance();
+        this.signUpcontext = context;
         this.progressDialog = progressDialog;
     }
 
@@ -69,8 +77,40 @@ public class AuthService {
         });
     }
 
-    public void signUp(){
+    public void signUp(EditText textEmailInput, EditText textPasswordInput){
+        this.textEmail = textEmailInput;
+        this.textPassword = textPasswordInput;
+        //Obtenemos el email y la contraseña desde las cajas de texto
+        String email = textEmail.getText().toString().trim();
+        String password = textPassword.getText().toString().trim();
 
+        //Verificamos que las cajas de texto no esten vacías
+        if (TextUtils.isEmpty(email)) {
+            Toast.makeText(signUpcontext, "Se debe ingresar un email", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        if (TextUtils.isEmpty(password)) {
+            Toast.makeText(signUpcontext, "Falta ingresar la contraseña", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        progressDialog.setMessage("Realizando registro en linea...");
+        progressDialog.show();
+
+        //creating a new user
+        firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(signUpcontext, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                //checking if success
+                if (task.isSuccessful()) {
+                    Log.i("FIREBASE", "SIGN UP SUCCESS");
+                } else {
+                    Log.i("FIREBASE", "SIGN UP NOT SUCCESS");
+                }
+                progressDialog.dismiss();
+            }
+        });
     }
 
 }

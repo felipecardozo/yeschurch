@@ -6,8 +6,9 @@
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
-    <string name="action_log_in">Log in</string>
-    <string name="action_sign_up">Sign up</string>
+    <string name="action_log_in">Iniciar Sesion</string>
+    <string name="action_sign_up">Crear Cuenta</string>
+    <string name="otambien">O también puedes crear una cuenta</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
@@ -65,5 +66,6 @@
     <string name="button_church_pictures">Ver fotos</string>
     <string name="title_activity_paola">paola</string>
     <string name="title_activity_picture">PictureActivity</string>
+
 
 </resources>
