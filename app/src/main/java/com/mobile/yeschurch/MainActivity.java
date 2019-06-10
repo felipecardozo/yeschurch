@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.mobile.yeschurch.login.StandardLoginActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button mapsButtons;
@@ -46,6 +48,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 nextActivity(SlideActivity.class);
+            }
+        });
+
+        Button login2 = (Button) findViewById(R.id.buttonLogin2);
+        login2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                nextActivity(StandardLoginActivity.class);
             }
         });
     }
