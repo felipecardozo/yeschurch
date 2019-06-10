@@ -116,6 +116,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         else if( type.equals(ChurchType.Bauptist) ){
             return Constants.bauptistChurches;
         }
+        else if( type.equals(ChurchType.Others) ){
+            return Constants.otherChurches;
+        }
         return Constants.christianChurches;
     }
 
