@@ -12,6 +12,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.List;
@@ -43,6 +44,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 churchSelected = ChurchType.getSeleted(churchTypes[position]);
                 Log.i("SPINNER", "> " + churchTypes[position]+" > "+churchSelected.name());
+                currentList = changeChurchByType(churchSelected);
+                putMarkers(currentList);
+                cleanFilters();
             }
 
             @Override
@@ -72,7 +76,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.clear();
         //https://github.com/codepath/android_guides/wiki/Fragment-Navigation-Drawer
         for( Church church : churches ){
-            mMap.addMarker(new MarkerOptions().position(church.getLatLng()).title(church.getName()));
+            mMap.addMarker(new MarkerOptions()
+                    .position(church.getLatLng())
+                    .title(church.getName()));
         }
     }
 
@@ -101,5 +107,35 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 putMarkers(currentList);
                 break;
         }
+    }
+
+    private List<Church> changeChurchByType(ChurchType type){
+        if( type.equals(ChurchType.Catholic) ){
+            return Constants.catholicChurches;
+        }
+        else if( type.equals(ChurchType.Bauptist) ){
+            return Constants.bauptistChurches;
+        }
+        return Constants.christianChurches;
+    }
+
+    private void cleanFilters() {
+        CheckBox cbKids = findViewById(R.id.checkbox_kids);
+        CheckBox cbParking = findViewById(R.id.checkbox_parking);
+        CheckBox cbBath = findViewById(R.id.checkbox_bathroom);
+        CheckBox cbAccess = findViewById(R.id.checkbox_accesability);
+        CheckBox cbSign = findViewById(R.id.checkbox_signlang);
+
+        if(cbKids.isChecked())
+            cbKids.toggle();
+        if(cbParking.isChecked())
+            cbParking.toggle();
+        if(cbBath.isChecked())
+            cbBath.toggle();
+        if(cbAccess.isChecked())
+            cbAccess.toggle();
+        if(cbSign.isChecked())
+            cbSign.toggle();
+
     }
 }
