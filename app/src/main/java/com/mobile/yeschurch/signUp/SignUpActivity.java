@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.mobile.yeschurch.MapsActivity;
 import com.mobile.yeschurch.R;
 import com.mobile.yeschurch.services.AuthService;
 

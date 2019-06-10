@@ -1,6 +1,7 @@
 package com.mobile.yeschurch.services;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.util.Log;
@@ -11,6 +12,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.mobile.yeschurch.MapsActivity;
 import com.mobile.yeschurch.login.StandardLoginActivity;
 import com.mobile.yeschurch.signUp.SignUpActivity;
 
@@ -68,6 +70,8 @@ public class AuthService {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     Log.i("FIREBASE", "Login SUCCESS");
+                    Intent intent = new Intent(context, MapsActivity.class);
+                    context.startActivity(intent);
                 }
                 else {
                     Log.i("FIREBASE", "Login NOT SUCCESS");
@@ -80,6 +84,7 @@ public class AuthService {
     public void signUp(EditText textEmailInput, EditText textPasswordInput){
         this.textEmail = textEmailInput;
         this.textPassword = textPasswordInput;
+
         //Obtenemos el email y la contraseña desde las cajas de texto
         String email = textEmail.getText().toString().trim();
         String password = textPassword.getText().toString().trim();
@@ -87,12 +92,10 @@ public class AuthService {
         //Verificamos que las cajas de texto no esten vacías
         if (TextUtils.isEmpty(email)) {
             Toast.makeText(signUpcontext, "Se debe ingresar un email", Toast.LENGTH_LONG).show();
-            return;
         }
 
         if (TextUtils.isEmpty(password)) {
             Toast.makeText(signUpcontext, "Falta ingresar la contraseña", Toast.LENGTH_LONG).show();
-            return;
         }
 
         progressDialog.setMessage("Realizando registro en linea...");
@@ -105,6 +108,8 @@ public class AuthService {
                 //checking if success
                 if (task.isSuccessful()) {
                     Log.i("FIREBASE", "SIGN UP SUCCESS");
+                    Intent intent = new Intent(signUpcontext, MapsActivity.class);
+                    signUpcontext.startActivity(intent);
                 } else {
                     Log.i("FIREBASE", "SIGN UP NOT SUCCESS");
                 }

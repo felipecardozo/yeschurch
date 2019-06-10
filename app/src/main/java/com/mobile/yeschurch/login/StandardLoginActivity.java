@@ -39,7 +39,6 @@ public class StandardLoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 authService.logIn(textEmail, textPassword);
-
             }
         });
 
