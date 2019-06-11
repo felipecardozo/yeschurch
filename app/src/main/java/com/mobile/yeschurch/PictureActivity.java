@@ -12,6 +12,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -32,7 +33,7 @@ public class PictureActivity extends AppCompatActivity{
     Button button_upload_image, button_take_image;
     EditText text_image_name, text_take_picture;
 
-    private static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 100;
+    private static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 1;
     public static final int MEDIA_TYPE_IMAGE = 100;
     static final int REQUEST_IMAGE_CAPTURE = 1;
 
@@ -57,15 +58,6 @@ public class PictureActivity extends AppCompatActivity{
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         imageToUpload = (ImageView) findViewById(R.id.imageToUpload);
         image_take_picture = (ImageView) findViewById(R.id.image_take_picture);
 
@@ -84,7 +76,7 @@ public class PictureActivity extends AppCompatActivity{
                 Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
                 if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-                    startActivityForResult(takePictureIntent, 0);
+                    startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
                 }
             }
         });
@@ -92,12 +84,14 @@ public class PictureActivity extends AppCompatActivity{
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        Log.i("FOTO", requestCode + "" + resultCode + " " + data.getAction());
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             super.onActivityResult(requestCode, resultCode, data);
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
-            //image_take_picture.setImageBitmap(imageBitmap);
-            image_take_picture.setImageURI(uriFoto);
+            //Log.i("FOTO", imageBitmap.getWidth() + "" + imageBitmap.getHeight());
+            image_take_picture.setImageBitmap(imageBitmap);
+            //image_take_picture.setImageURI(uriFoto);
         }
     }
 
