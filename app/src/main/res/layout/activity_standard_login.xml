@@ -14,6 +14,7 @@
         android:layout_marginTop="32dp"
         android:text="@string/action_log_in"
         android:textSize="18dp"
+        android:layout_centerHorizontal="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordText" />
 
@@ -25,6 +26,7 @@
         android:layout_marginTop="16dp"
         android:text="@string/action_sign_up"
         android:textSize="18dp"
+        android:layout_centerHorizontal="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -33,6 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp"
         android:autofillHints=""
         android:ems="10"
@@ -48,6 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
         android:layout_marginTop="92dp"
+        android:layout_centerHorizontal="true"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/prompt_email"
@@ -62,9 +66,18 @@
         android:layout_height="15dp"
         android:layout_marginStart="48dp"
         android:layout_marginTop="32dp"
+        android:layout_centerHorizontal="true"
         android:text="@string/otambien"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonLogin2" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_height="66dp"
+        android:layout_width="wrap_content"
+        app:srcCompat="@drawable/logo_app3"
+        android:layout_centerHorizontal="true"
+         />
 
 
 </android.support.constraint.ConstraintLayout>
