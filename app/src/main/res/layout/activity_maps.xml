@@ -24,6 +24,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
+
             <Spinner
                 android:id="@+id/spinner_churchtype"
                 android:layout_width="match_parent"
