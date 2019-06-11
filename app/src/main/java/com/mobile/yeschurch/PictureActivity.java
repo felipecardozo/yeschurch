@@ -58,6 +58,8 @@ public class PictureActivity extends AppCompatActivity{
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        setTitle("Fotos");
+
         imageToUpload = (ImageView) findViewById(R.id.imageToUpload);
         image_take_picture = (ImageView) findViewById(R.id.image_take_picture);
 
