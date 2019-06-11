@@ -136,6 +136,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public void onInfoWindowClick(Marker marker) {
         Log.i("FIREBASE", marker.getTitle());
+        startActivity(new Intent(this, DetailActivity.class));
     }
 
     public void onCheckboxClicked(View view) {

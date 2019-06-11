@@ -25,6 +25,8 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+        setTitle("Crear cuenta");
+
         progressDialog = new ProgressDialog(this);
         authService = new AuthService(this, progressDialog);
 
