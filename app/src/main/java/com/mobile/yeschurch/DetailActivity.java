@@ -31,6 +31,12 @@ public class DetailActivity extends AppCompatActivity {
             }
         });
 
+        Intent intent = getIntent();
+        String title = intent.getStringExtra("churchName");
+        if( title!=null ){
+            setTitle(title);
+        }
+
         Church church = createChurch();
         EditText nameChurch = (EditText)findViewById(R.id.text_church_name);
         nameChurch.setText(church.getName());
