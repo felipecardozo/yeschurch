@@ -9,7 +9,6 @@ public class ChurchFilterService {
 
     public List<Church> applyKids(List<Church> churches, boolean flag, ChurchType type){
         List<Church> result = new ArrayList<>();
-
         if( !flag ){
             return getFullChurch(type);
         }
@@ -18,7 +17,6 @@ public class ChurchFilterService {
                 result.add(churc);
             }
         }
-
         return result;
     }
 
@@ -32,20 +30,46 @@ public class ChurchFilterService {
                 result.add(churc);
             }
         }
-
         return result;
     }
 
-    public List<Church> applyBathroom(List<Church> currentList, boolean checked, ChurchType christian) {
-        return Constants.christianChurches;
+    public List<Church> applyBathroom(List<Church> churches, boolean checked, ChurchType type) {
+        List<Church> result = new ArrayList<>();
+        if( !checked ){
+            return getFullChurch(type);
+        }
+        for( Church churc : churches ){
+            if( churc.isBathrooms() && checked ){
+                result.add(churc);
+            }
+        }
+        return result;
     }
 
-    public List<Church> applyAccesability(List<Church> currentList, boolean checked, ChurchType christian) {
-        return Constants.christianChurches;
+    public List<Church> applyAccesability(List<Church> churches, boolean checked, ChurchType type) {
+        List<Church> result = new ArrayList<>();
+        if( !checked ){
+            return getFullChurch(type);
+        }
+        for( Church churc : churches ){
+            if( churc.isAccessibility() && checked ){
+                result.add(churc);
+            }
+        }
+        return result;
     }
 
-    public List<Church> applySignLanguage(List<Church> currentList, boolean checked, ChurchType christian) {
-        return Constants.christianChurches;
+    public List<Church> applySignLanguage(List<Church> churches, boolean checked, ChurchType type) {
+        List<Church> result = new ArrayList<>();
+        if( !checked ){
+            return getFullChurch(type);
+        }
+        for( Church churc : churches ){
+            if( churc.isSignLanguage() && checked ){
+                result.add(churc);
+            }
+        }
+        return result;
     }
 
     private List<Church> getFullChurch(ChurchType type){

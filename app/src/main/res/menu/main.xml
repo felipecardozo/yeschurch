@@ -1,9 +1,7 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
-
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-
-        android:title="@string/action_settings"/>
-
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/new_game"
+        android:title="Perfil" android:onClick="onOptionsItemSelected"/>
+    <item android:id="@+id/help"
+        android:title="Cerrar Sesion" android:onClick="onOptionsItemSelected" />
 </menu>
