@@ -118,6 +118,26 @@ public class Constants {
         christianChurches.get(10).setParking(true);
         christianChurches.get(10).setAccessibility(true);
         christianChurches.get(10).setBathrooms(true);
+        christianChurches.get(11).setBathrooms(true);
+
+        christianChurches.get(12).setBathrooms(true);
+        christianChurches.get(12).setAccessibility(true);
+
+        christianChurches.get(13).setBathrooms(true);
+        christianChurches.get(13).setAccessibility(true);
+
+        christianChurches.get(14).setBathrooms(true);
+        christianChurches.get(14).setAccessibility(true);
+
+        christianChurches.get(15).setBathrooms(true);
+        christianChurches.get(15).setAccessibility(true);
+
+        christianChurches.get(16).setBathrooms(true);
+        christianChurches.get(16).setAccessibility(true);
+
+        christianChurches.get(17).setBathrooms(true);
+
+        christianChurches.get(18).setBathrooms(true);
     }
 
     static {
@@ -132,9 +152,13 @@ public class Constants {
         //iglesia señor de los milagros
         catholicChurches.get(4).setAccessibility(true);
         catholicChurches.get(4).setBathrooms(true);
+        catholicChurches.get(4).setSignLanguage(true);
+        catholicChurches.get(4).setParking(true);
+
         catholicChurches.get(5).setAccessibility(true);
         catholicChurches.get(5).setBathrooms(true);
         catholicChurches.get(6).setAccessibility(true);
+        catholicChurches.get(6).setParking(true);
         catholicChurches.get(7).setBathrooms(true);
         catholicChurches.get(7).setAccessibility(true);
         catholicChurches.get(8).setBathrooms(true);
@@ -146,12 +170,15 @@ public class Constants {
         catholicChurches.get(11).setBathrooms(true);
         catholicChurches.get(11).setAccessibility(true);
         catholicChurches.get(12).setBathrooms(true);
+        catholicChurches.get(12).setParking(true);
     }
 
     static {
         //Iglesia Bautista Nueva Vida
         bauptistChurches.get(0).setBathrooms(true);
         bauptistChurches.get(0).setAccessibility(true);
+        bauptistChurches.get(0).setSignLanguage(true);
+        bauptistChurches.get(0).setKids(true);
 
         bauptistChurches.get(1).setBathrooms(true);
         bauptistChurches.get(1).setAccessibility(true);
