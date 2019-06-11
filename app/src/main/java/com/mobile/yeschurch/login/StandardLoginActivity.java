@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.mobile.yeschurch.MapsActivity;
 import com.mobile.yeschurch.R;
 import com.mobile.yeschurch.services.AuthService;
 import com.mobile.yeschurch.signUp.SignUpActivity;
@@ -21,12 +24,25 @@ public class StandardLoginActivity extends AppCompatActivity {
     private Button buttonLogIn;
     private ProgressDialog progressDialog;
     private AuthService authService;
+    private FirebaseAuth firebaseAuth;
+    private FirebaseUser firebaseUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_standard_login);
         setTitle("Log In or Sign Up");
+
+        firebaseAuth = FirebaseAuth.getInstance();
+        firebaseUser = firebaseAuth.getCurrentUser();
+        if( firebaseUser!= null && firebaseUser.getEmail()!= null ){
+            String email = firebaseUser.getEmail();
+            if( email != null && !email.isEmpty()){
+                startActivity(new Intent(this, MapsActivity.class));
+            }
+        }
+
+
 
         progressDialog = new ProgressDialog(this);
         authService = new AuthService(this, progressDialog);

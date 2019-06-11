@@ -27,6 +27,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.mobile.yeschurch.login.StandardLoginActivity;
+import com.mobile.yeschurch.signout.SignOutActivity;
 
 import java.util.List;
 
@@ -118,7 +119,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     public boolean onOptionsItemSelected(MenuItem item) {
         Log.i("FIREBASE", item.getTitle().toString());
-
+        if( item.getTitle().toString().equalsIgnoreCase("Cerrar Sesion") ){
+            startActivity(new Intent(this, SignOutActivity.class));
+        }
         super.onOptionsItemSelected(item);
         return true;
     }
