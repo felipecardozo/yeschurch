@@ -9,15 +9,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/top_bar_activity_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="?attr/colorPrimary"
-            android:theme="@style/AppTheme.PopupOverlay">
-
-        </android.support.v7.widget.Toolbar>
-
         <LinearLayout
             android:id="@+id/l2"
             android:layout_width="match_parent"

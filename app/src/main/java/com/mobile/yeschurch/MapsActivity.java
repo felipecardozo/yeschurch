@@ -4,9 +4,14 @@ import android.app.ActionBar;
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.CheckBox;
 import android.widget.Spinner;
@@ -25,7 +30,7 @@ import com.mobile.yeschurch.login.StandardLoginActivity;
 
 import java.util.List;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
+public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
 
     private GoogleMap mMap;
 
@@ -47,18 +52,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         churchFilterService = new ChurchFilterService();
         currentList = Constants.christianChurches;
 
+        setTitle("Mapa de Iglesias");
+
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
         String email = firebaseUser.getEmail();
         if( email == null && email.isEmpty()){
             startActivity(new Intent(this, StandardLoginActivity.class));
         }
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.top_bar_activity_toolbar);
-        toolbar.setTitle("Bienvenido");
-
-        //setTitle("Bienvenido "+email);
-        //Toast.makeText(this, "Bienvenido "+email, Toast.LENGTH_LONG).show();
 
         churchTypes = getResources().getStringArray(R.array.churchtype);
         Spinner spinnerChurchType = findViewById(R.id.spinner_churchtype);
@@ -105,6 +106,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     .title(church.getName())
                     .snippet("Tap para mas informacion"));
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        //MenuInflater inflater = getMenuInflater();
+        //inflater.inflate(R.menu.main, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Log.i("FIREBASE", item.getTitle().toString());
+
+        super.onOptionsItemSelected(item);
+        return true;
     }
 
     @Override
@@ -171,4 +187,5 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             cbSign.toggle();
 
     }
+
 }
