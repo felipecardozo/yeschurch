@@ -26,7 +26,7 @@
             android:name=".PictureActivity"
             android:label="@string/title_activity_picture"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Picture" />
+
         <activity android:name=".SlideActivity" />
         <activity
             android:name=".DetailActivity"

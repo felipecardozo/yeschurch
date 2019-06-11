@@ -19,8 +19,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
+//import com.google.firebase.storage.FirebaseStorage;
+//import com.google.firebase.storage.StorageReference;
 
 import java.io.File;
 import java.io.IOException;
@@ -42,9 +42,9 @@ public class PictureActivity extends AppCompatActivity{
     static final int PERMISSION_CODE = 40;
     public String currentPhotoPath;
 
-    FirebaseStorage storage;
+    //FirebaseStorage storage;
 
-    public StorageReference mStorageRef;
+    //public StorageReference mStorageRef;
     public Uri uriFoto;
     public String nameFoto;
 
