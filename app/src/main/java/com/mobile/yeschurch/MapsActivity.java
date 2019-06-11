@@ -27,6 +27,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.mobile.yeschurch.login.StandardLoginActivity;
+import com.mobile.yeschurch.profile.ProfileActivity;
 import com.mobile.yeschurch.signout.SignOutActivity;
 
 import java.util.List;
@@ -41,6 +42,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private ChurchType churchSelected;
     private FirebaseAuth firebaseAuth;
     private FirebaseUser firebaseUser;
+    private String email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +59,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
-        String email = firebaseUser.getEmail();
+        email = firebaseUser.getEmail();
         if( email == null && email.isEmpty()){
             startActivity(new Intent(this, StandardLoginActivity.class));
         }
@@ -121,6 +123,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         Log.i("FIREBASE", item.getTitle().toString());
         if( item.getTitle().toString().equalsIgnoreCase("Cerrar Sesion") ){
             startActivity(new Intent(this, SignOutActivity.class));
+        }
+        else if(item.getTitle().toString().equalsIgnoreCase("Perfil")){
+            Intent intent = new Intent(this, ProfileActivity.class);
+            intent.putExtra("email", email);
+            startActivity(intent);
         }
         super.onOptionsItemSelected(item);
         return true;

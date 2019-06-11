@@ -92,6 +92,32 @@ public class Constants {
         christianChurches.get(4).setParking(true);
         christianChurches.get(4).setAccessibility(true);
         christianChurches.get(4).setBathrooms(true);
+
+        christianChurches.get(5).setParking(true);
+        christianChurches.get(5).setAccessibility(true);
+        christianChurches.get(5).setBathrooms(true);
+        christianChurches.get(5).setKids(true);
+
+        christianChurches.get(6).setParking(true);
+        christianChurches.get(6).setAccessibility(true);
+        christianChurches.get(6).setBathrooms(true);
+        christianChurches.get(6).setSignLanguage(true);
+
+        christianChurches.get(7).setParking(true);
+        christianChurches.get(7).setAccessibility(true);
+        christianChurches.get(7).setBathrooms(true);
+
+        christianChurches.get(8).setParking(true);
+        christianChurches.get(8).setAccessibility(true);
+        christianChurches.get(8).setBathrooms(true);
+
+        christianChurches.get(9).setParking(true);
+        christianChurches.get(9).setAccessibility(false);
+        christianChurches.get(9).setBathrooms(true);
+
+        christianChurches.get(10).setParking(true);
+        christianChurches.get(10).setAccessibility(true);
+        christianChurches.get(10).setBathrooms(true);
     }
 
     static {
@@ -104,14 +130,41 @@ public class Constants {
         catholicChurches.get(2).setBathrooms(true);
         catholicChurches.get(2).setAccessibility(true);
         //iglesia señor de los milagros
-        catholicChurches.get(3).setAccessibility(true);
-        catholicChurches.get(3).setBathrooms(true);
+        catholicChurches.get(4).setAccessibility(true);
+        catholicChurches.get(4).setBathrooms(true);
+        catholicChurches.get(5).setAccessibility(true);
+        catholicChurches.get(5).setBathrooms(true);
+        catholicChurches.get(6).setAccessibility(true);
+        catholicChurches.get(7).setBathrooms(true);
+        catholicChurches.get(7).setAccessibility(true);
+        catholicChurches.get(8).setBathrooms(true);
+        catholicChurches.get(8).setAccessibility(true);
+        catholicChurches.get(9).setBathrooms(true);
+        catholicChurches.get(9).setAccessibility(true);
+        catholicChurches.get(10).setBathrooms(true);
+        catholicChurches.get(10).setAccessibility(true);
+        catholicChurches.get(11).setBathrooms(true);
+        catholicChurches.get(11).setAccessibility(true);
+        catholicChurches.get(12).setBathrooms(true);
     }
 
     static {
         //Iglesia Bautista Nueva Vida
         bauptistChurches.get(0).setBathrooms(true);
         bauptistChurches.get(0).setAccessibility(true);
+
+        bauptistChurches.get(1).setBathrooms(true);
+        bauptistChurches.get(1).setAccessibility(true);
+
+        bauptistChurches.get(2).setBathrooms(true);
+        bauptistChurches.get(2).setAccessibility(true);
+
+        bauptistChurches.get(3).setBathrooms(true);
+        bauptistChurches.get(3).setAccessibility(true);
+
+        bauptistChurches.get(4).setBathrooms(true);
+        bauptistChurches.get(4).setAccessibility(true);
+        bauptistChurches.get(4).setParking(true);
     }
 
 }
