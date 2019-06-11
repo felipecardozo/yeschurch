@@ -17,6 +17,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -24,7 +25,7 @@ import com.mobile.yeschurch.login.StandardLoginActivity;
 
 import java.util.List;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
 
     private GoogleMap mMap;
 
@@ -54,7 +55,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.top_bar_activity_toolbar);
-        toolbar.setTitle("Bienvenido "+email);
+        toolbar.setTitle("Bienvenido");
 
         //setTitle("Bienvenido "+email);
         //Toast.makeText(this, "Bienvenido "+email, Toast.LENGTH_LONG).show();
@@ -89,9 +90,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.getUiSettings().setRotateGesturesEnabled(true);
         mMap.getUiSettings().setTiltGesturesEnabled(true);
         mMap.getUiSettings().setMapToolbarEnabled(true);
-        //mMap.addMarker(new MarkerOptions().position(bogota).title("Find..."));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(Constants.bogota));
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(Constants.bogota, Constants.PREFERED_ZOOM));
+        mMap.setOnInfoWindowClickListener(this);
         putMarkers( currentList );
     }
 
@@ -101,8 +102,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         for( Church church : churches ){
             mMap.addMarker(new MarkerOptions()
                     .position(church.getLatLng())
-                    .title(church.getName()));
+                    .title(church.getName())
+                    .snippet("Tap para mas informacion"));
         }
+    }
+
+    @Override
+    public void onInfoWindowClick(Marker marker) {
+        Log.i("FIREBASE", marker.getTitle());
     }
 
     public void onCheckboxClicked(View view) {

@@ -24,58 +24,78 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
-
-            <Spinner
-                android:id="@+id/spinner_churchtype"
+            <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/GridLayout1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:entries="@array/churchtype"
-                android:prompt="@string/filter" />
+                android:layout_height="match_parent"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:rowCount="4"
+                tools:context=".GridXMLActivity">
 
-            <Spinner
-                android:id="@+id/spinner_language"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:entries="@array/languages"
-                android:prompt="@string/filter" />
+                <Spinner
+                    android:id="@+id/spinner_churchtype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/churchtype"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:prompt="@string/filter" />
 
-            <CheckBox android:id="@+id/checkbox_parking"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/hasparking"
-                android:onClick="onCheckboxClicked"/>
+                <Spinner
+                    android:id="@+id/spinner_language"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:entries="@array/languages"
+                    android:prompt="@string/filter" />
 
-            <CheckBox android:id="@+id/checkbox_kids"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/haskids"
-                android:onClick="onCheckboxClicked"/>
+                <CheckBox
+                    android:id="@+id/checkbox_parking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onCheckboxClicked"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:text="@string/hasparking" />
 
-            <CheckBox android:id="@+id/checkbox_accesability"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/hasaccesability"
-                android:onClick="onCheckboxClicked"/>
+                <CheckBox
+                    android:id="@+id/checkbox_kids"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onCheckboxClicked"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:text="@string/haskids" />
 
-            <CheckBox android:id="@+id/checkbox_bathroom"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/hasbathroom"
-                android:onClick="onCheckboxClicked"/>
+                <CheckBox android:id="@+id/checkbox_bathroom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hasbathroom"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:onClick="onCheckboxClicked"/>
 
-            <CheckBox android:id="@+id/checkbox_signlang"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/hassignlanguage"
-                android:onClick="onCheckboxClicked"/>
+                <CheckBox android:id="@+id/checkbox_signlang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hassignlanguage"
+                    android:layout_row="2"
+                    android:layout_column="1"
+                    android:onClick="onCheckboxClicked"/>
 
-            <!--<Button
-                android:id="@+id/buttonApply"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorAccent"
-                android:text="@string/apply" />-->
+                <CheckBox android:id="@+id/checkbox_accesability"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hasaccesability"
+                    android:layout_row="3"
+                    android:layout_column="0"
+                    android:onClick="onCheckboxClicked"/>
+
+            </GridLayout>
+
         </LinearLayout>
 
         <LinearLayout
@@ -97,14 +117,3 @@
     </LinearLayout>
 
 </RelativeLayout>
-
-<!--
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:map="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MapsActivity" />
--->
