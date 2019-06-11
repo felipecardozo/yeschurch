@@ -26,6 +26,7 @@ public class StandardLoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_standard_login);
+        setTitle("Log In or Sign Up");
 
         progressDialog = new ProgressDialog(this);
         authService = new AuthService(this, progressDialog);
