@@ -66,8 +66,7 @@ public class PictureActivity extends AppCompatActivity{
         button_upload_image = (Button) findViewById(R.id.button_upload_image);
         button_take_image = (Button) findViewById(R.id.button_take_image);
 
-        text_image_name = (EditText) findViewById(R.id.text_image_name);
-        text_take_picture = (EditText) findViewById(R.id.text_take_picture);
+        //text_take_picture = (EditText) findViewById(R.id.text_take_picture);
 
         //imageToUpload.setOnClickListener(this);
         //button_upload_image.setOnClickListener(this);
