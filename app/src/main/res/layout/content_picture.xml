@@ -23,9 +23,9 @@
                 android:id="@+id/imageToUpload"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
                 app:srcCompat="@drawable/church_el_lugar_de_supresencia"
-                tools:layout_editor_absoluteX="54dp"
-                tools:layout_editor_absoluteY="40dp" />
+                 />
 
             <ImageView
                 android:id="@+id/image_take_picture"
