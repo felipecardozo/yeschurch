@@ -88,10 +88,12 @@ public class Constants {
         christianChurches.get(3).setBathrooms(true);
         christianChurches.get(3).setParking(true);
         christianChurches.get(3).setAccessibility(true);
+        christianChurches.get(3).setKids(true);
         //Iglesia Centro Mundial de Avivamiento
         christianChurches.get(4).setParking(true);
         christianChurches.get(4).setAccessibility(true);
         christianChurches.get(4).setBathrooms(true);
+        christianChurches.get(4).setKids(true);
 
         christianChurches.get(5).setParking(true);
         christianChurches.get(5).setAccessibility(true);
@@ -125,6 +127,7 @@ public class Constants {
 
         christianChurches.get(13).setBathrooms(true);
         christianChurches.get(13).setAccessibility(true);
+        christianChurches.get(13).setParking(true);
 
         christianChurches.get(14).setBathrooms(true);
         christianChurches.get(14).setAccessibility(true);
@@ -138,6 +141,7 @@ public class Constants {
         christianChurches.get(17).setBathrooms(true);
 
         christianChurches.get(18).setBathrooms(true);
+        christianChurches.get(18).setParking(true);
     }
 
     static {
